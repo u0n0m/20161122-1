@@ -10,6 +10,11 @@ public class animalHospital {
 		System.out.println(cat1.age3);
 		//System.out.println(cat1.age4);
 		
+		cat cat2 = new cat();
+		cat2.catAgePrint();
+		cat2.catAgePrint2();
+		cat2.catAgePrint3();
+//		cat2.catAgePrint4();
 	}
 
 }

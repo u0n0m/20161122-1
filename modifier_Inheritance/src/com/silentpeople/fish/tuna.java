@@ -12,6 +12,7 @@ public class tuna extends cat {
 //		System.out.println(age4);
 		
 		catAgePrint(); //cat이라는 이름의 부모 클래스의 catAgePrint라는 메소드를 호출할 수 있다.
+		catAgePrint2();
 	}
 	
 }

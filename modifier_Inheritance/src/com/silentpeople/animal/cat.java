@@ -12,7 +12,30 @@ public class cat {
 		System.out.println(age3);
 		System.out.println(age4);
 	}
+	protected void catAgePrint2() {
+		System.out.println(age1);
+		System.out.println(age2);
+		System.out.println(age3);
+		System.out.println(age4);
+	}
+	void catAgePrint3() {
+		System.out.println(age1);
+		System.out.println(age2);
+		System.out.println(age3);
+		System.out.println(age4);
+	}
+	private void catAgePrint4() {
+		System.out.println(age1);
+		System.out.println(age2);
+		System.out.println(age3);
+		System.out.println(age4);
+	}
 	
-	
+	public void test(){
+		catAgePrint();
+		catAgePrint2();
+		catAgePrint3();
+		catAgePrint4();
+	}
 	
 }
