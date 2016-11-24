@@ -9,6 +9,8 @@ public class MainThread {
 
 		park.start();
 		choi.start();
+		park.attack();
+		choi.attack();
 	}
 	
 }

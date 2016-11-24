@@ -10,7 +10,8 @@ public class Avarta extends Thread {
 	
 	public void attack() {
 		for(int count=0; count<10000; count++){
-			System.out.println(getName()+": Attack"+count);	
+			System.out.println(getName()+": Attack"+count);
+			
 		}		
 	}
 			  
