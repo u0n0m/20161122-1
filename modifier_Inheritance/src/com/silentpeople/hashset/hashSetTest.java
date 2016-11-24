@@ -19,6 +19,7 @@ public class hashSetTest {
 /*		for(int i=0;i<hs1.size();i++) {
 			System.out.println(hs1.toString());
 		}*/
+		System.out.println(hs1.toString());
 		
 		Iterator i_hs1 = (Iterator)hs1.iterator();
 		while(i_hs1.hasNext()){

@@ -1,6 +1,7 @@
 package com.silentpeople.arraylist_Ex;
 
 import java.util.ArrayList;
+import java.util.Iterator;
 
 public class arraylistTest {
 	private static ArrayList<Integer> arrlist1;
@@ -18,6 +19,13 @@ public class arraylistTest {
 			System.out.println(arrlist1.get(i));
 		}
 		System.out.println(arrlist1.size());
+		
+		Iterator i_arrlist1 = (Iterator)arrlist1.iterator();
+		while(i_arrlist1.hasNext()){
+			System.out.println(i_arrlist1.next());
+		}
+		
+		
 /*		System.out.println("ArrayList\n");
 		System.out.println(arrlist1.get(0));
 		System.out.println(arrlist1.get(1));
