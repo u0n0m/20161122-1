@@ -8,10 +8,12 @@ public class Avarta extends Thread {
 		this.name = name;
 	}
 	
-	public void attack() {
+	public void run() {
 		for(int count=0; count<10000; count++){
-			System.out.println(getName()+": Attack"+count);
-			
+			System.out.println(name + ": Attack" + count);
+			try {
+			      Thread.sleep(1000);
+			} catch (InterruptedException e) { }
 		}		
 	}
 			  
