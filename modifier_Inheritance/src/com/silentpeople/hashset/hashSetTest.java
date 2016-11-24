@@ -15,7 +15,9 @@ public class hashSetTest {
 		hs1.add(5);
 		hs1.add(3);
 		hs1.add(1);
-		
+		hs1.add(100);
+		hs1.add(10000);
+		hs1.add(55);
 /*		for(int i=0;i<hs1.size();i++) {
 			System.out.println(hs1.toString());
 		}*/

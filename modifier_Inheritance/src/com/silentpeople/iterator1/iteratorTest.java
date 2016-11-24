@@ -3,6 +3,8 @@ package com.silentpeople.iterator1;
 import java.util.ArrayList;
 import java.util.HashSet;
 import java.util.Iterator;
+import java.util.LinkedList;
+import java.util.Queue;
 
 public class iteratorTest {
 
@@ -34,10 +36,20 @@ public class iteratorTest {
 		}
 		
 		
-/*		for(int i=0;i<arrlist1.size();i++){
-			System.out.println(arrlist1.get(i));
-		}*/
+		Queue<String> q1 = new LinkedList<String>();
+		q1.offer("haha");
+		q1.offer("hoho");
+		q1.offer("hihi");
+		q1.offer("huhu");
 		
+		System.out.println(q1);
+		Iterator i_q1 = (Iterator)q1.iterator();
+		while(i_q1.hasNext()){
+			//System.out.println(i_q1.next());
+			System.out.println(q1.poll());
+		}
+		System.out.println(q1);
+
 		
 	}
 
