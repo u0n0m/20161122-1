@@ -25,6 +25,7 @@ public class Server {
 
 			InputStream receiver = cliSock1.getInputStream();
 			byte [] recvBuf = new byte[100]; //클라이언트로부터 수신된 데이터를 담을 공간(변수)
+			receiver.read(recvBuf);
 			String recvMsg = new String(recvBuf); //byte배열을 String으로 변환하는 작업
 			System.out.println("receive data: " + recvMsg); //수신한 데이터 화면에 출력하기
 			

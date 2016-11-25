@@ -1,6 +1,5 @@
 package com.silentpeople.socket;
 
-import java.io.IOException;
 import java.io.InputStream;
 import java.io.OutputStream;
 import java.net.InetSocketAddress;
@@ -10,31 +9,28 @@ public class Client {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		try {
-			Socket conSock = new Socket();
-			InetSocketAddress conAddr = new InetSocketAddress("127.0.0.1", 1818);
-			conSock.connect(conAddr);
-			OutputStream sender = conSock.getOutputStream();
-			InputStream reciever = conSock.getInputStream();
+		try{
+			Socket connSock = new Socket(); // 서버에 접속할 때 사용할 소켓 생성
+			InetSocketAddress connAddr = new InetSocketAddress("127.0.0.1", 1818);
+			connSock.connect(connAddr); // 위에서 결정한 주소로 연결 
+			
+			OutputStream sender = connSock.getOutputStream(); //소켓으로 데이터를 보내려면 꼭 필요함.
 
-			byte[] recvBuf = new byte[100];
-			int bytesCnt = reciever.read(recvBuf);
-			String recvMsg = new String(recvBuf, 0, bytesCnt, "UTF-8");
-			System.out.println("receive message from " + conSock.getRemoteSocketAddress() + ": " + recvMsg + "\n");
-
-			String sendBuf = "Nice to meet you!!";
-			sender.write(sendBuf.getBytes());
-			System.out.println("send Message to " + conSock.getRemoteSocketAddress() + ": " + sendBuf + "\n");
-
-			/*
-			 * BufferedReader in = new BufferedReader(new
-			 * InputStreamReader(socket.getInputStream())); PrintWriter out =
-			 * new PrintWriter(socket.getOutputStream(),true);
-			 */
-		} catch (Throwable e) {
-			// TODO: handle exception
-			e.printStackTrace();
+			InputStream receive = connSock.getInputStream();// 소켓에서 데이터를 가져오려면 꼭 필요함.
+			byte [] recvBuf = new byte[100];//수신데이터를 담을 저장공간 
+			receive.read(recvBuf); //소켓에서 수신데이터 가져오기
+			String recvMsg = new String(recvBuf); //byte배열을 String으로 변환하는 작업
+			System.out.println(recvBuf); //가져온거 출력하기
+			
+			String sendBuf ="Nice to meet you^^"; // 서버로 보낼 안녕메세지
+			sender.write(sendBuf.getBytes());	//서버로 메시지 보내기
+			
 		}
+		catch (Exception e) {
+			// TODO: handle exception
+		}
+		
+
 	}
 
 }
