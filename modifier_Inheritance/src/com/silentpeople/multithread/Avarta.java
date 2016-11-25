@@ -13,7 +13,9 @@ public class Avarta extends Thread {
 			System.out.println(name + ": Attack" + count);
 			try {
 			      Thread.sleep(1000);
-			} catch (InterruptedException e) { }
+			} catch (InterruptedException e) {
+				
+			}
 		}		
 	}
 			  
